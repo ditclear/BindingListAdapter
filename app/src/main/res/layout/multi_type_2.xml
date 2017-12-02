@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="item"
+                type="io.ditclear.app.multitype.bean.ItemWrapper"/>
+        <variable
+                name="presenter"
+                type="io.ditclear.bindinglist.kotlin.BindingViewAdapter.ItemClickPresenter"/>
+    </data>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:onClick="@{(v)->presenter.onItemClick(v,item)}"
+            android:background="@color/colorHeader"
+            android:gravity="center"
+            tools:text="item"
+            android:text="@{item.bean}"/>
+</layout>
