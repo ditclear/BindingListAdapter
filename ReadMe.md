@@ -54,9 +54,11 @@ val mAdapter by lazy {
 
 #### 操作
 
-改变数据源dataSoruce即可，通过回调在内部会调用Adapter相应的notify方法
+*the same as ArrayList*  具体见[SingleTypeListKotlin.kt](https://github.com/ditclear/BindingListAdapter/blob/0473dfe0150bd7049ac7f4f404eb12027298c8de/app/src/main/java/io/ditclear/app/singletype/SingleTypeListKotlin.kt)和[MultiTypeListKotlin.kt](https://github.com/ditclear/BindingListAdapter/blob/0473dfe0150bd7049ac7f4f404eb12027298c8de/app/src/main/java/io/ditclear/app/multitype/MultiTypeListKotlin.kt)
 
-因此方法同ArrayList相同
+改变数据源dataSource即可，通过回调在内部会调用Adapter相应的notify方法
+
+因此方法与ArrayList相同
 
 #### 监听
 
