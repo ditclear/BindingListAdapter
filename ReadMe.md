@@ -8,9 +8,9 @@
 
 [demo.apk](demo.apk)
 
-### gif：
+### gif
 
-![singletype](/Users/vienan/Desktop/github/BindingListAdapter/gif/singletype.gif)                                 ![multitype](/Users/vienan/Desktop/github/BindingListAdapter/gif/multitype.gif) 
+![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)
 
 
 
@@ -92,8 +92,6 @@ override fun decorator(holder: BindingViewHolder<ViewDataBinding>?, position: In
 [markzhai](https://github.com/markzhai)/[DataBindingAdapter](https://github.com/markzhai/DataBindingAdapter)
 
 ### License
-
----
 
 [MIT](LICENSE.txt)
 
