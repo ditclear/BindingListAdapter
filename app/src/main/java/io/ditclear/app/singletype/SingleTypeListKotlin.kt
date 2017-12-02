@@ -5,12 +5,15 @@ import android.databinding.ObservableArrayList
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import io.ditclear.app.R
 import io.ditclear.app.databinding.ListFragmentBinding
 import io.ditclear.bindinglist.kotlin.BindingViewAdapter
 import io.ditclear.bindinglist.kotlin.SingleTypeAdapter
+import java.util.*
 
 /**
  * 页面描述：SingleTypeListKotlin
@@ -42,5 +45,23 @@ class SingleTypeListKotlin : AppCompatActivity(), BindingViewAdapter.ItemClickPr
         (0..6).map { "Item $it" }.let {
             dataSource.addAll(it)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_list,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        val randomIndex=Random().nextInt(if (dataSource.isNotEmpty()) dataSource.size else 1)
+        when(item?.itemId){
+            R.id.add_item -> dataSource.add(randomIndex,"Added Item $randomIndex")
+            R.id.remove_item -> {
+                if (dataSource.isNotEmpty()) dataSource.removeAt(randomIndex)
+                else Toast.makeText(this,"没数据了",Toast.LENGTH_SHORT).show()
+            }
+            R.id.clear_all -> dataSource.clear()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -38,7 +38,12 @@ open class SingleTypeAdapter<T>(context: Context, private val layoutRes: Int, li
             }
 
             override fun onItemRangeRemoved(contributorViewModels: ObservableList<T>, i: Int, i1: Int) {
-                notifyDataSetChanged()
+                if (contributorViewModels.isEmpty()) {
+                    notifyDataSetChanged()
+                } else {
+                    notifyItemRangeRemoved(i,i1)
+                }
+
             }
         })
     }
