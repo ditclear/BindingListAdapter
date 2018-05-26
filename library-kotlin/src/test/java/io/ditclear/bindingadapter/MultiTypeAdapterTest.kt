@@ -1,4 +1,4 @@
-package io.ditclear.bindinglist.kotlin
+package io.ditclear.bindingadapter
 
 import android.databinding.ObservableArrayList
 import android.databinding.ObservableList

@@ -10,7 +10,7 @@
                 type="String"/>
         <variable
                 name="presenter"
-                type="io.ditclear.bindinglist.kotlin.BindingViewAdapter.ItemClickPresenter"/>
+                type="io.ditclear.bindingadapter.ItemClickPresenter"/>
     </data>
 
     <LinearLayout

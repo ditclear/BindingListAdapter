@@ -13,9 +13,10 @@ import io.ditclear.app.ItemType
 import io.ditclear.app.R
 import io.ditclear.app.databinding.ListFragmentBinding
 import io.ditclear.app.multitype.bean.ItemWrapper
-import io.ditclear.bindinglist.kotlin.BindingViewAdapter
-import io.ditclear.bindinglist.kotlin.BindingViewHolder
-import io.ditclear.bindinglist.kotlin.MultiTypeAdapter
+import io.ditclear.bindingadapter.BindingViewHolder
+import io.ditclear.bindingadapter.ItemClickPresenter
+import io.ditclear.bindingadapter.ItemDecorator
+import io.ditclear.bindingadapter.MultiTypeAdapter
 import java.util.*
 
 /**
@@ -23,16 +24,16 @@ import java.util.*
  *
  * Created by ditclear on 2017/12/2.
  */
-class MultiTypeListKotlin : AppCompatActivity(), BindingViewAdapter.ItemClickPresenter<Any>,BindingViewAdapter.ItemDecorator{
+class MultiTypeListKotlin : AppCompatActivity(), ItemClickPresenter<Any>, ItemDecorator {
 
-    override fun onItemClick(v: View?, item: Any) {
+    override fun onItemClick(v: View, item: Any) {
         when(item){
             is ItemWrapper -> Toast.makeText(this, item.bean, Toast.LENGTH_SHORT).show()
             is String -> Toast.makeText(this, item.split("").reversed().joinToString(""), Toast.LENGTH_SHORT).show()
         }
     }
 
-    override fun decorator(holder: BindingViewHolder<ViewDataBinding>?, position: Int, viewType: Int) {
+    override fun decorator(holder: BindingViewHolder<ViewDataBinding>, position: Int, viewType: Int) {
 
     }
 
@@ -46,7 +47,7 @@ class MultiTypeListKotlin : AppCompatActivity(), BindingViewAdapter.ItemClickPre
                 when(item){
                     is ItemWrapper -> item.type
                     is String -> ItemType.TYPE_5
-                    else -> throw Resources.NotFoundException("${item::class} 找不到相应的ViewType")
+                    else -> throw Resources.NotFoundException("${item::class} has not found")
                 }
 
         }).apply {

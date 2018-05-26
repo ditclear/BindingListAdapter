@@ -11,8 +11,8 @@ import android.view.View
 import android.widget.Toast
 import io.ditclear.app.R
 import io.ditclear.app.databinding.ListFragmentBinding
-import io.ditclear.bindinglist.kotlin.BindingViewAdapter
-import io.ditclear.bindinglist.kotlin.SingleTypeAdapter
+import io.ditclear.bindingadapter.ItemClickPresenter
+import io.ditclear.bindingadapter.SingleTypeAdapter
 import java.util.*
 
 /**
@@ -20,9 +20,9 @@ import java.util.*
  *
  * Created by ditclear on 2017/12/2.
  */
-class SingleTypeListKotlin : AppCompatActivity(), BindingViewAdapter.ItemClickPresenter<String> {
+class SingleTypeListKotlin : AppCompatActivity(), ItemClickPresenter<String> {
 
-    override fun onItemClick(v: View?, item: String) {
+    override fun onItemClick(v: View, item: String) {
         Toast.makeText(this,item,Toast.LENGTH_SHORT).show()
     }
 

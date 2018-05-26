@@ -1,4 +1,4 @@
-package io.ditclear.bindinglist.kotlin
+package io.ditclear.bindingadapter
 
 import android.content.Context
 import android.databinding.DataBindingUtil
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 
 
 /**
- * 页面描述：SingleTypeAdapter
+ * description：SingleTypeAdapter
  *
  * Created by ditclear on 2017/10/3.
  */
@@ -49,7 +49,7 @@ open class SingleTypeAdapter<T>(context: Context, private val layoutRes: Int, li
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int) =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
             BindingViewHolder(DataBindingUtil.inflate<ViewDataBinding>(mLayoutInflater, layoutRes, parent, false))
 
 

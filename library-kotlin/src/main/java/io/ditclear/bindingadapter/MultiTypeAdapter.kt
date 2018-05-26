@@ -1,4 +1,4 @@
-package io.ditclear.bindinglist.kotlin
+package io.ditclear.bindingadapter
 
 import android.content.Context
 import android.content.res.Resources
@@ -56,7 +56,7 @@ class MultiTypeAdapter(context: Context, list: ObservableArrayList<Any>, val mul
         })
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): BindingViewHolder<ViewDataBinding> {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BindingViewHolder<ViewDataBinding> {
         return BindingViewHolder(
                 DataBindingUtil.inflate<ViewDataBinding>(mLayoutInflater, getLayoutRes(viewType), parent, false))
     }
@@ -73,5 +73,5 @@ class MultiTypeAdapter(context: Context, list: ObservableArrayList<Any>, val mul
 
     @LayoutRes
     protected fun getLayoutRes(viewType: Int): Int = mItemTypeToLayoutMap[viewType]
-            ?: throw Resources.NotFoundException("$viewType 对应的布局不存在")
+            ?: throw Resources.NotFoundException("$viewType has not registered")
 }

@@ -1,12 +1,10 @@
-package io.ditclear.bindinglist.kotlin
+package io.ditclear.bindingadapter
 
 import android.content.Context
 import android.databinding.ObservableList
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
-
 /**
  * describe：BindingViewAdapter
  *
@@ -21,11 +19,14 @@ abstract class BindingViewAdapter<T>(context: Context, protected val list: Obser
     var itemDecorator: ItemDecorator? = null
 
 
-    override fun onBindViewHolder(holder: BindingViewHolder<ViewDataBinding>?, position: Int) {
+    override fun onBindViewHolder(holder: BindingViewHolder<ViewDataBinding>, position: Int) {
         val item = list[position]
-        holder?.binding?.setVariable(BR.item,item)
-        holder?.binding?.setVariable(BR.presenter, itemPresenter)
-        holder?.binding?.executePendingBindings()
+        //pending binding itemModel
+        holder.binding.setVariable(BR.item,item)
+        //pending binding presenter
+        holder.binding.setVariable(BR.presenter, itemPresenter)
+        holder.binding.executePendingBindings()
+        //set decorator
         itemDecorator?.decorator(holder, position, getItemViewType(position))
     }
 
@@ -33,10 +34,4 @@ abstract class BindingViewAdapter<T>(context: Context, protected val list: Obser
 
     fun getItem(position: Int): T? = list[position]
 
-    interface ItemClickPresenter<in Any> {
-        fun onItemClick(v: View? = null, item: Any)
-    }
-    interface ItemDecorator {
-        fun decorator(holder: BindingViewHolder<ViewDataBinding>?, position: Int, viewType: Int)
-    }
 }

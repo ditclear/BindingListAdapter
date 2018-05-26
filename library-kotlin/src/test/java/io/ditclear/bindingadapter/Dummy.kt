@@ -1,4 +1,4 @@
-package io.ditclear.bindinglist.kotlin
+package io.ditclear.bindingadapter
 
 /**
  * 页面描述：Dummy
