@@ -55,7 +55,7 @@ creating a single-type RecyclerView.Adapter with only a simple 3 step
 2. Create our `dataSource` and  `SingleTypeAdapter` in `Activity/Fragment` file
 
    ```kotlin
-   val dataSource=ObservableArrayList<T>() //通常位于ViewModel层
+   val dataSource=ObservableArrayList<T>() //typically in the ViewModel layer
    val mAdapter by lazy {
        SingleTypeAdapter<T>(this, R.layout.list_item, dataSource)
       .apply{
