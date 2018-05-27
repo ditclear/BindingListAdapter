@@ -8,6 +8,8 @@
 
 只需要关心Item，编写RecyclerView.Adapter竟然如此简单（重新定义）
 
+[English Version](README_EN.md)
+
 ### demo
 
 [demo.apk](demo.apk)
@@ -22,7 +24,7 @@
 
 PaoNet : [https://github.com/ditclear/paonet](https://github.com/ditclear/paonet)
 
-#### Download
+### Download
 
 ```groovy
 implementation 'com.ditclear:bindinglistadapter:1.0.0'
@@ -285,7 +287,7 @@ override fun onItemClick(v: View, item: String) {
 如果以上不能满足需求，可以通过设置ItemDecorator来进行附加的设置
 
 ```kotlin
-override fun decorator(holder: BindingViewHolder<ViewDataBinding>?, position: Int, viewType: Int) {
+override fun decorator(holder: BindingViewHolder<ViewDataBinding>, position: Int, viewType: Int) {
   	//可根据viewType进行区分
 	//do sth..
 }
