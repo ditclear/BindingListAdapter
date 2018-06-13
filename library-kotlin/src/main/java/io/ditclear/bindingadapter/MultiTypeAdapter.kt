@@ -32,6 +32,7 @@ class MultiTypeAdapter(context: Context, list: ObservableArrayList<Any>, val mul
                 if (sender?.isNotEmpty() == true) {
                     notifyItemRangeRemoved(positionStart, itemCount)
                 } else {
+                    mLastPosition=-1
                     notifyDataSetChanged()
                 }
             }

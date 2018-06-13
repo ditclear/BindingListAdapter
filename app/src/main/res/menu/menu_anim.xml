@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/single_list">
+
+        <item
+                android:id="@+id/scale"
+                android:title="scale in"
+                app:showAsAction="never"/>
+
+        <item
+                android:id="@+id/alpha"
+                android:title="alpha in"
+                app:showAsAction="never"/>
+    </group>
+    <group android:id="@+id/layout">
+        <item
+                android:id="@+id/linear"
+                android:title="Linear"
+                app:showAsAction="never"/>
+        <item
+                android:id="@+id/grid"
+                android:title="grid"
+                app:showAsAction="never"/>
+
+        <item
+                android:id="@+id/staggeredgrid"
+                android:title="staggeredgrid"
+                app:showAsAction="never"/>
+    </group>
+</menu>

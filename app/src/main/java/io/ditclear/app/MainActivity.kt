@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import io.ditclear.app.anim.AnimtorActivity
 import io.ditclear.app.databinding.MainActivityBinding
 import io.ditclear.app.multitype.MultiTypeListKotlin
 import io.ditclear.app.singletype.SingleTypeListKotlin
@@ -14,8 +15,9 @@ class MainActivity : AppCompatActivity() ,Presenter{
 
     override fun onClick(v: View?) {
         when(v?.id){
-            R.id.single_btn -> startActivity(Intent(this,SingleTypeListKotlin::class.java))
+            R.id.single_btn -> startActivity(Intent(this, SingleTypeListKotlin::class.java))
             R.id.multi_btn -> startActivity(Intent(this,MultiTypeListKotlin::class.java))
+            R.id.anim_btn -> startActivity(Intent(this,AnimtorActivity::class.java))
             else -> {}
         }
     }

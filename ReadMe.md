@@ -16,9 +16,7 @@
 
 ### 示例
 
-![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)
-
-
+![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)			          ![animtor](gif/animtor.gif)
 
 #### 更多示例
 
@@ -92,7 +90,7 @@ dataSource.remove(item) // or dataSource.removeAt(indexOfItem)
 dataSource.clear()
 dataSource.addAll(newList)
 //batch remove 
-dataSouce.removeRange(startIndex ,offset) //kotin extension
+dataSouce.rangeRemove(startIndex ,offset) //kotin extension
 
 //and so on
 ```
@@ -259,7 +257,7 @@ dataSource.remove(item) // or dataSource.removeAt(indexOfItem)
 dataSource.clear()
 dataSource.addAll(newList)
 //batch remove 
-dataSouce.removeRange(startIndex ,offset) //kotin extension
+dataSouce.rangeRemove(startIndex ,offset) //kotin extension
 
 //and so on
 ```
@@ -290,6 +288,26 @@ override fun onItemClick(v: View, item: String) {
 override fun decorator(holder: BindingViewHolder<ViewDataBinding>, position: Int, viewType: Int) {
   	//可根据viewType进行区分
 	//do sth..
+}
+```
+
+#### 动画
+
+提供两种可选动画[ScaleInItemAnimator](library-kotlin/src/main/java/io/ditclear/bindingadapter/animators/ScaleInItemAnimator.kt)和[AlphaInItemAnimator](library-kotlin/src/main/java/io/ditclear/bindingadapter/animators/AlphaInItemAnimator.kt)
+
+```kotlin
+	mAdapter.itemAnimator = ScaleInItemAnimator(interpolator = OvershootInterpolator())
+	mAdapter.itemAnimator = AlphaInItemAnimator(interpolator = DecelerateInterpolator())
+```
+
+可通过实现[itemAnimator](/library-kotlin/src/main/java/io/ditclear/bindingadapter/ItemClickPresenter.kt)接口进行自定义动画
+
+```kotlin
+interface ItemAnimator{
+
+    fun scrollUpAnim(v:View)
+
+    fun scrollDownAnim(v: View)
 }
 ```
 

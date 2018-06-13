@@ -10,7 +10,7 @@ Say goodbye to repeated, redundant custom Adapters , Make the developer's focus 
 
 ### Example
 
-![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)
+![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)![animtor](gif/animtor.gif)
 
 #### more
 
@@ -211,6 +211,26 @@ override fun decorator(holder: BindingViewHolder<ViewDataBinding>, position: Int
 ```
 
 Similar to `onBindViewHolder` method
+
+### ItemAnimation
+
+Provides  [ScaleInItemAnimator](library-kotlin/src/main/java/io/ditclear/bindingadapter/animators/ScaleInItemAnimator.kt)and [AlphaInItemAnimator](library-kotlin/src/main/java/io/ditclear/bindingadapter/animators/AlphaInItemAnimator.kt)
+
+```kotlin
+	mAdapter.itemAnimator = ScaleInItemAnimator(interpolator = OvershootInterpolator())
+	mAdapter.itemAnimator = AlphaInItemAnimator(interpolator = DecelerateInterpolator())
+```
+
+if it cannot meet your requirements，you can user your own by implementing  [itemAnimator](/library-kotlin/src/main/java/io/ditclear/bindingadapter/ItemClickPresenter.kt)
+
+```kotlin
+interface ItemAnimator{
+
+    fun scrollUpAnim(v:View)
+
+    fun scrollDownAnim(v: View)
+}
+```
 
 ### Thanks To
 

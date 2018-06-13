@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".singletype.SingleTypeListKotlin" android:label="SingleTypeListKotlin"/>
         <activity android:name=".multitype.MultiTypeListKotlin" android:label="MultiTypeListKotlin"/>
+        <activity android:name=".anim.AnimtorActivity" android:label="AnimtorActivity"/>
     </application>
 
 </manifest>

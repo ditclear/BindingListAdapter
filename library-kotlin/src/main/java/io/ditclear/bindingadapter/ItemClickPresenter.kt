@@ -17,7 +17,14 @@ interface ItemDecorator {
     fun decorator(holder: BindingViewHolder<ViewDataBinding>, position: Int, viewType: Int)
 }
 
-fun ObservableArrayList<Any>.removeRange(startIndex: Int, offset: Int) {
+interface ItemAnimator{
+
+    fun scrollUpAnim(v:View)
+
+    fun scrollDownAnim(v: View)
+}
+
+fun ObservableArrayList<*>.rangeRemove(startIndex: Int, offset: Int) {
     (startIndex + offset - 1 downTo startIndex).forEach {
         removeAt(it)
     }
