@@ -45,7 +45,7 @@ publish {
     userOrg = 'vienan'
     groupId = 'com.ditclear'
     artifactId = 'bindinglistadapter'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'A Simple RecyclerView Adapter in DataBinding'
     website = 'https://github.com/ditclear/BindingListAdapter'
 }

@@ -1,6 +1,6 @@
 ## BindingListAdapter
 
-![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.0-green.svg)    ![](https://img.shields.io/badge/recyclerview_version-27.1.1-blue.svg)     ![](https://img.shields.io/badge/kotlin_version-1.2.41-blue.svg)
+![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.1-green.svg)    ![](https://img.shields.io/badge/recyclerview_version-27.1.1-blue.svg)     ![](https://img.shields.io/badge/kotlin_version-1.2.41-blue.svg)
 
 Say goodbye to repeated, redundant custom Adapters , Make the developer's focus on the data, beacuse data-driven UI
 
@@ -19,7 +19,7 @@ PaoNet : [https://github.com/ditclear/paonet](https://github.com/ditclear/paonet
 ### Download
 
 ```groovy
-implementation 'com.ditclear:bindinglistadapter:1.0.0'
+implementation 'com.ditclear:bindinglistadapter:1.0.1'
 ```
 
 ### Quick Start

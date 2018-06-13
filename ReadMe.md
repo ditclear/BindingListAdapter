@@ -2,7 +2,7 @@
 
 ## BindingListAdapter
 
-![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.0-green.svg)    ![](https://img.shields.io/badge/recyclerview_version-27.1.1-blue.svg)     ![](https://img.shields.io/badge/kotlin_version-1.2.41-blue.svg)
+![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.1-green.svg)    ![](https://img.shields.io/badge/recyclerview_version-27.1.1-blue.svg)     ![](https://img.shields.io/badge/kotlin_version-1.2.41-blue.svg)
 
 告别反复、冗余的自定义Adapter，让开发者的重点落在数据上，做到数据驱动UI
 
@@ -25,7 +25,7 @@ PaoNet : [https://github.com/ditclear/paonet](https://github.com/ditclear/paonet
 ### Download
 
 ```groovy
-implementation 'com.ditclear:bindinglistadapter:1.0.0'
+implementation 'com.ditclear:bindinglistadapter:1.0.1'
 ```
 
 ### 快速开始
