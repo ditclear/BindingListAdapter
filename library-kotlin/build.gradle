@@ -6,12 +6,11 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -24,28 +23,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 }
 
 dependencies {
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
-    //data binding
-    kapt "com.android.databinding:compiler:3.1.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {
     mavenCentral()
 }
 
-
 publish {
     userOrg = 'vienan'
     groupId = 'com.ditclear'
     artifactId = 'bindinglistadapter'
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.3'
     desc = 'A Simple RecyclerView Adapter in DataBinding'
     website = 'https://github.com/ditclear/BindingListAdapter'
 }

@@ -1,4 +1,4 @@
-package io.ditclear.bindingadapter;
+package io.ditclear.bindingadapterx;
 
 import static org.junit.Assert.assertEquals;
 

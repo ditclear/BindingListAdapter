@@ -1,6 +1,6 @@
 ## BindingListAdapter
 
-![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.1-green.svg)    ![](https://img.shields.io/badge/recyclerview_version-27.1.1-blue.svg)     ![](https://img.shields.io/badge/kotlin_version-1.2.41-blue.svg)
+ ![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)  ![](https://img.shields.io/badge/version-1.0.3-green.svg)  ![](https://img.shields.io/badge/recyclerview_version-28.0.0-blue.svg)  ![](https://img.shields.io/badge/kotlin_version-1.3.11-blue.svg) ![](https://img.shields.io/badge/androidx support-true-green.svg)
 
 Say goodbye to repeated, redundant custom Adapters , Make the developer's focus on the data, beacuse data-driven UI
 
@@ -10,7 +10,7 @@ Say goodbye to repeated, redundant custom Adapters , Make the developer's focus 
 
 ### Example
 
-![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)![animtor](gif/animtor.gif)
+![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)
 
 #### more
 
@@ -19,7 +19,9 @@ PaoNet : [https://github.com/ditclear/paonet](https://github.com/ditclear/paonet
 ### Download
 
 ```groovy
-implementation 'com.ditclear:bindinglistadapter:1.0.1'
+implementation 'com.ditclear:bindinglistadapter:1.0.3'
+// if you use androidx
+implementation 'com.ditclear:bindinglistadapterx:1.0.0'
 ```
 
 ### Quick Start
@@ -212,25 +214,6 @@ override fun decorator(holder: BindingViewHolder<ViewDataBinding>, position: Int
 
 Similar to `onBindViewHolder` method
 
-### ItemAnimation
-
-Provides  [ScaleInItemAnimator](library-kotlin/src/main/java/io/ditclear/bindingadapter/animators/ScaleInItemAnimator.kt)and [AlphaInItemAnimator](library-kotlin/src/main/java/io/ditclear/bindingadapter/animators/AlphaInItemAnimator.kt)
-
-```kotlin
-	mAdapter.itemAnimator = ScaleInItemAnimator(interpolator = OvershootInterpolator())
-	mAdapter.itemAnimator = AlphaInItemAnimator(interpolator = DecelerateInterpolator())
-```
-
-if it cannot meet your requirements，you can user your own by implementing  [itemAnimator](/library-kotlin/src/main/java/io/ditclear/bindingadapter/ItemClickPresenter.kt)
-
-```kotlin
-interface ItemAnimator{
-
-    fun scrollUpAnim(v:View)
-
-    fun scrollDownAnim(v: View)
-}
-```
 
 ### Thanks To
 

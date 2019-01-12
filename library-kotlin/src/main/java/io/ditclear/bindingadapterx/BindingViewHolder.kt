@@ -1,4 +1,4 @@
-package io.ditclear.bindingadapter
+package io.ditclear.bindingadapterx
 
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView

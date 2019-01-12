@@ -10,7 +10,7 @@
                 type="io.ditclear.app.multitype.bean.ItemWrapper"/>
         <variable
                 name="presenter"
-                type="io.ditclear.bindingadapter.ItemClickPresenter"/>
+                type="io.ditclear.bindingadapterx.ItemClickPresenter"/>
     </data>
 
     <TextView

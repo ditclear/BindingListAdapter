@@ -28,12 +28,6 @@
                 android:layout_height="48dp"
                 android:onClick="@{(v)->presenter.onClick(v)}"
                 android:text="multiple"/>
-        <Button
-                android:id="@+id/anim_btn"
-                android:layout_width="410dp"
-                android:layout_height="48dp"
-                android:onClick="@{(v)->presenter.onClick(v)}"
-                android:text="animator"/>
 
     </LinearLayout>
 </layout>

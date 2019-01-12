@@ -1,24 +1,23 @@
 package io.ditclear.app.multitype
 
 import android.content.res.Resources
-import android.databinding.DataBindingUtil
-import android.databinding.ObservableArrayList
-import android.databinding.ViewDataBinding
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.DividerItemDecoration
 import android.view.View
-import android.view.animation.DecelerateInterpolator
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ObservableArrayList
+import androidx.databinding.ViewDataBinding
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import io.ditclear.app.ItemType
 import io.ditclear.app.R
 import io.ditclear.app.databinding.ListFragmentBinding
 import io.ditclear.app.multitype.bean.ItemWrapper
-import io.ditclear.bindingadapter.BindingViewHolder
-import io.ditclear.bindingadapter.ItemClickPresenter
-import io.ditclear.bindingadapter.ItemDecorator
-import io.ditclear.bindingadapter.MultiTypeAdapter
-import io.ditclear.bindingadapter.animators.AlphaInItemAnimator
+import io.ditclear.bindingadapterx.BindingViewHolder
+import io.ditclear.bindingadapterx.ItemClickPresenter
+import io.ditclear.bindingadapterx.ItemDecorator
+import io.ditclear.bindingadapterx.MultiTypeAdapter
 import java.util.*
 
 /**
@@ -61,7 +60,6 @@ class MultiTypeListKotlin : AppCompatActivity(), ItemClickPresenter<Any>, ItemDe
             addViewTypeToLayoutMap(ItemType.TYPE_5, R.layout.multi_type_5)
             itemPresenter = this@MultiTypeListKotlin
             itemDecorator = this@MultiTypeListKotlin
-            itemAnimator = AlphaInItemAnimator(interpolator = DecelerateInterpolator())
 
         }
     }
@@ -69,12 +67,13 @@ class MultiTypeListKotlin : AppCompatActivity(), ItemClickPresenter<Any>, ItemDe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(mBinding.root)
-        mBinding.adapter = mAdapter
+        mBinding.recyclerView.layoutManager = LinearLayoutManager(this)
+        mBinding.recyclerView.adapter = mAdapter
         mBinding.recyclerView.setItemViewCacheSize(0)
         mBinding.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         (0..20).map {
             val type = Random().nextInt(6)
-            when (type) {
+            return@map when (type) {
                 in 0..4 -> ItemWrapper(type, "Item --> Type $type")
                 5 -> "Item Type  5"
                 else -> throw Exception("类型不对")
@@ -83,7 +82,6 @@ class MultiTypeListKotlin : AppCompatActivity(), ItemClickPresenter<Any>, ItemDe
             dataSource.addAll(it)
         }
     }
-
 
 
 }
