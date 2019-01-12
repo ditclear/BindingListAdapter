@@ -2,7 +2,7 @@
 
 ## BindingListAdapter
 
-![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.3-green.svg)  ![](https://img.shields.io/badge/recyclerview_version-28.0.0-blue.svg)  ![](https://img.shields.io/badge/kotlin_version-1.3.11-blue.svg) ![](https://img.shields.io/badge/androidx support-true-green.svg)
+![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.3-green.svg)  ![](https://img.shields.io/badge/recyclerview_version-28.0.0-blue.svg)  ![](https://img.shields.io/badge/kotlin_version-1.3.11-blue.svg) ![](https://img.shields.io/badge/androidx_support-true-green.svg)
 
 告别反复、冗余的自定义Adapter，让开发者的重点落在数据上，做到数据驱动UI
 
