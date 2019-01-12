@@ -1,4 +1,4 @@
-package io.ditclear.bindingadapter
+package io.ditclear.bindingadapterx
 
 import android.content.Context
 import android.databinding.DataBindingUtil
@@ -19,7 +19,7 @@ open class SingleTypeAdapter<T>(context: Context, private val layoutRes: Int, li
         initSingleList()
     }
 
-    protected fun initSingleList(){
+    protected fun initSingleList() {
         list.addOnListChangedCallback(object : ObservableList.OnListChangedCallback<ObservableList<T>>() {
             override fun onChanged(contributorViewModels: ObservableList<T>) {
                 notifyDataSetChanged()
@@ -39,10 +39,9 @@ open class SingleTypeAdapter<T>(context: Context, private val layoutRes: Int, li
 
             override fun onItemRangeRemoved(contributorViewModels: ObservableList<T>, i: Int, i1: Int) {
                 if (contributorViewModels.isEmpty()) {
-                    mLastPosition=-1
                     notifyDataSetChanged()
                 } else {
-                    notifyItemRangeRemoved(i,i1)
+                    notifyItemRangeRemoved(i, i1)
                 }
 
             }

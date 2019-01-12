@@ -1,20 +1,19 @@
 package io.ditclear.app.singletype
 
-import android.databinding.DataBindingUtil
-import android.databinding.ObservableArrayList
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ObservableArrayList
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.DividerItemDecoration
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.view.animation.OvershootInterpolator
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import io.ditclear.app.R
 import io.ditclear.app.databinding.ListFragmentBinding
-import io.ditclear.bindingadapter.ItemClickPresenter
-import io.ditclear.bindingadapter.SingleTypeAdapter
-import io.ditclear.bindingadapter.animators.ScaleInItemAnimator
+import io.ditclear.bindingadapterx.ItemClickPresenter
+import io.ditclear.bindingadapterx.SingleTypeAdapter
 import java.util.*
 
 /**
@@ -35,14 +34,14 @@ class SingleTypeListKotlin : AppCompatActivity(), ItemClickPresenter<String> {
     val mAdapter by lazy {
         SingleTypeAdapter<String>(this, R.layout.list_item, dataSource).apply {
             itemPresenter = this@SingleTypeListKotlin
-            itemAnimator = ScaleInItemAnimator(interpolator = OvershootInterpolator())
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(mBinding.root)
-        mBinding.adapter = mAdapter
+        mBinding.recyclerView.adapter = mAdapter
+        mBinding.recyclerView.layoutManager = LinearLayoutManager(this)
         mBinding.recyclerView.setItemViewCacheSize(0)
         mBinding.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 

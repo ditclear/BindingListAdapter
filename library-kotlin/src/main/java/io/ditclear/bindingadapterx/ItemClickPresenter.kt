@@ -1,4 +1,4 @@
-package io.ditclear.bindingadapter
+package io.ditclear.bindingadapterx
 
 import android.databinding.ObservableArrayList
 import android.databinding.ViewDataBinding
@@ -15,13 +15,6 @@ interface ItemClickPresenter<in Any> {
 
 interface ItemDecorator {
     fun decorator(holder: BindingViewHolder<ViewDataBinding>, position: Int, viewType: Int)
-}
-
-interface ItemAnimator{
-
-    fun scrollUpAnim(v:View)
-
-    fun scrollDownAnim(v: View)
 }
 
 fun ObservableArrayList<*>.rangeRemove(startIndex: Int, offset: Int) {

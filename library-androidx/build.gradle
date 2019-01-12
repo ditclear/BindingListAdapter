@@ -1,16 +1,20 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
+//upload
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 28
+
     defaultConfig {
-        applicationId "io.ditclear.app"
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -23,20 +27,21 @@ android {
     }
 }
 
-kapt {
-    generateStubs = true
+dependencies {
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    testImplementation 'junit:junit:4.12'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
 
-dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    //data binding
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
-    testImplementation 'junit:junit:4.12'
-    implementation project(':library-androidx')
+publish {
+    userOrg = 'vienan'
+    groupId = 'com.ditclear'
+    artifactId = 'bindinglistadapterx'
+    publishVersion = '1.0.0'
+    desc = 'A Simple RecyclerView Adapter in DataBinding for androidx'
+    website = 'https://github.com/ditclear/BindingListAdapter'
 }

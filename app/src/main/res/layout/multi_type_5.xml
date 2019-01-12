@@ -10,7 +10,7 @@
                 type="String"/>
         <variable
                 name="presenter"
-                type="io.ditclear.bindingadapter.ItemClickPresenter"/>
+                type="io.ditclear.bindingadapterx.ItemClickPresenter"/>
     </data>
 
     <LinearLayout

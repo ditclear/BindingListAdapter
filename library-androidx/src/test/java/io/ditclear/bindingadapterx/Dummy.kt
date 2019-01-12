@@ -1,4 +1,4 @@
-package io.ditclear.bindingadapter
+package io.ditclear.bindingadapterx
 
 /**
  * 页面描述：Dummy

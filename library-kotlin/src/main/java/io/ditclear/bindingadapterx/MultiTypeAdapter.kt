@@ -1,4 +1,4 @@
-package io.ditclear.bindingadapter
+package io.ditclear.bindingadapterx
 
 import android.content.Context
 import android.content.res.Resources
@@ -32,7 +32,6 @@ class MultiTypeAdapter(context: Context, list: ObservableArrayList<Any>, val mul
                 if (sender?.isNotEmpty() == true) {
                     notifyItemRangeRemoved(positionStart, itemCount)
                 } else {
-                    mLastPosition=-1
                     notifyDataSetChanged()
                 }
             }
