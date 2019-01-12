@@ -2,7 +2,7 @@
 
 ## BindingListAdapter
 
-![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.1-green.svg)    ![](https://img.shields.io/badge/recyclerview_version-27.1.1-blue.svg)     ![](https://img.shields.io/badge/kotlin_version-1.2.41-blue.svg)
+![](https://img.shields.io/badge/minSdk-14-brightgreen.svg)    ![](https://img.shields.io/badge/version-1.0.3-green.svg)  ![](https://img.shields.io/badge/recyclerview_version-28.0.0-blue.svg)  ![](https://img.shields.io/badge/kotlin_version-1.3.11-blue.svg) ![](https://img.shields.io/badge/androidx support-true-green.svg)
 
 告别反复、冗余的自定义Adapter，让开发者的重点落在数据上，做到数据驱动UI
 
@@ -16,7 +16,7 @@
 
 ### 示例
 
-![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)			          ![animtor](gif/animtor.gif)
+![singletype](gif/singletype.gif)                       ![multitype](gif/multitype.gif)
 
 #### 更多示例
 
@@ -25,7 +25,12 @@ PaoNet : [https://github.com/ditclear/paonet](https://github.com/ditclear/paonet
 ### Download
 
 ```groovy
-implementation 'com.ditclear:bindinglistadapter:1.0.1'
+
+implementation 'com.ditclear:bindinglistadapter:1.0.3'
+
+// if you use androidx
+implementation 'com.ditclear:bindinglistadapterx:1.0.0'
+
 ```
 
 ### 快速开始
@@ -291,25 +296,6 @@ override fun decorator(holder: BindingViewHolder<ViewDataBinding>, position: Int
 }
 ```
 
-#### 动画
-
-提供两种可选动画[ScaleInItemAnimator](library-kotlin/src/main/java/io/ditclear/bindingadapter/animators/ScaleInItemAnimator.kt)和[AlphaInItemAnimator](library-kotlin/src/main/java/io/ditclear/bindingadapter/animators/AlphaInItemAnimator.kt)
-
-```kotlin
-	mAdapter.itemAnimator = ScaleInItemAnimator(interpolator = OvershootInterpolator())
-	mAdapter.itemAnimator = AlphaInItemAnimator(interpolator = DecelerateInterpolator())
-```
-
-可通过实现[itemAnimator](/library-kotlin/src/main/java/io/ditclear/bindingadapter/ItemClickPresenter.kt)接口进行自定义动画
-
-```kotlin
-interface ItemAnimator{
-
-    fun scrollUpAnim(v:View)
-
-    fun scrollDownAnim(v: View)
-}
-```
 
 ### Thanks To
 

@@ -7,6 +7,6 @@ import android.view.View
  *
  * Created by ditclear on 2017/11/29.
  */
-interface Presenter : View.OnClickListener{
+interface Presenter : View.OnClickListener {
     override fun onClick(v: View?)
 }

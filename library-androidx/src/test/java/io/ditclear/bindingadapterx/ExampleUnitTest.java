@@ -1,8 +1,8 @@
-package io.ditclear.bindingadapter;
-
-import static org.junit.Assert.assertEquals;
+package io.ditclear.bindingadapterx;
 
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
