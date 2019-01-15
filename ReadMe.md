@@ -12,7 +12,7 @@
 
 ### demo
 
-[demo.apk](demo.apk)
+https://fabu.love/7me2fm
 
 ### 示例
 

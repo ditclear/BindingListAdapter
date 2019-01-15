@@ -6,7 +6,7 @@ Say goodbye to repeated, redundant custom Adapters , Make the developer's focus 
 
 ### demo
 
-[demo.apk](demo.apk)
+https://fabu.love/7me2fm
 
 ### Example
 
