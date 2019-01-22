@@ -19,7 +19,7 @@ PaoNet : [https://github.com/ditclear/paonet](https://github.com/ditclear/paonet
 ### Download
 
 ```groovy
-implementation 'com.ditclear:bindinglistadapter:1.0.3'
+implementation 'com.ditclear:bindinglistadapter:1.0.1'
 // if you use androidx
 implementation 'com.ditclear:bindinglistadapterx:1.0.0'
 ```
