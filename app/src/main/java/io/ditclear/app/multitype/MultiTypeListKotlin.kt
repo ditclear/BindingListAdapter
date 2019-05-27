@@ -21,7 +21,7 @@ import io.ditclear.bindingadapterx.MultiTypeAdapter
 import java.util.*
 
 /**
- * 页面描述：SingleTypeListKotlin
+ * 页面描述：PartialRefreshListKotlin
  *
  * Created by ditclear on 2017/12/2.
  */

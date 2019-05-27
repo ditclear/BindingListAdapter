@@ -17,17 +17,22 @@
 
         <Button
                 android:id="@+id/single_btn"
-                android:layout_width="392dp"
-                android:layout_height="54dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
                 android:onClick="@{(v)->presenter.onClick(v)}"
                 android:text="single"/>
 
         <Button
                 android:id="@+id/multi_btn"
-                android:layout_width="410dp"
+                android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:onClick="@{(v)->presenter.onClick(v)}"
                 android:text="multiple"/>
-
+        <Button
+            android:id="@+id/ob_btn"
+            android:layout_width="410dp"
+            android:layout_height="48dp"
+            android:onClick="@{(v)->presenter.onClick(v)}"
+            android:text="partial refresh(局部刷新)"/>
     </LinearLayout>
 </layout>
