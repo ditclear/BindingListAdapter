@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".singletype.SingleTypeListKotlin" android:label="SingleTypeListKotlin"/>
-        <activity android:name=".multitype.MultiTypeListKotlin" android:label="MultiTypeListKotlin"/>
-        <activity android:name=".anim.AnimtorActivity" android:label="AnimtorActivity"/>
+        <activity android:name=".partial.PartialRefreshListKotlin" android:label="PartialRefreshList"/>
+        <activity android:name=".multitype.MultiTypeListKotlin" android:label="MultiTypeList"/>
+        <activity android:name=".singletype.SingleTypeListKotlin" android:label="SingleTypeList"/>
     </application>
 
 </manifest>

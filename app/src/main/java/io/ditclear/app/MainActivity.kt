@@ -8,14 +8,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import io.ditclear.app.databinding.MainActivityBinding
 import io.ditclear.app.multitype.MultiTypeListKotlin
-import io.ditclear.app.singletype.SingleTypeListKotlin
+import io.ditclear.app.partial.PartialRefreshListKotlin
 
 class MainActivity : AppCompatActivity(), Presenter {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.single_btn -> startActivity(Intent(this, SingleTypeListKotlin::class.java))
+            R.id.single_btn -> startActivity(Intent(this, PartialRefreshListKotlin::class.java))
             R.id.multi_btn -> startActivity(Intent(this, MultiTypeListKotlin::class.java))
+            R.id.ob_btn -> startActivity(Intent(this, PartialRefreshListKotlin::class.java))
             else -> {
             }
         }
