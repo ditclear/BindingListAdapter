@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import io.ditclear.app.databinding.MainActivityBinding
 import io.ditclear.app.multitype.MultiTypeListKotlin
 import io.ditclear.app.partial.PartialRefreshListKotlin
+import io.ditclear.app.without_db.PartialRefreshList
 
 class MainActivity : AppCompatActivity(), Presenter {
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity(), Presenter {
             R.id.single_btn -> startActivity(Intent(this, PartialRefreshListKotlin::class.java))
             R.id.multi_btn -> startActivity(Intent(this, MultiTypeListKotlin::class.java))
             R.id.ob_btn -> startActivity(Intent(this, PartialRefreshListKotlin::class.java))
+            R.id.normal_btn -> startActivity(Intent(this, PartialRefreshList::class.java))
             else -> {
             }
         }

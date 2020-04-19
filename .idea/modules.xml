@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BindingListAdapter.iml" filepath="$PROJECT_DIR$/BindingListAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/BindingListAdapter-app.iml" filepath="$PROJECT_DIR$/app/BindingListAdapter-app.iml" group="BindingListAdapter/app" />
+      <module fileurl="file://$PROJECT_DIR$/library-androidx/BindingListAdapter-library-androidx.iml" filepath="$PROJECT_DIR$/library-androidx/BindingListAdapter-library-androidx.iml" group="BindingListAdapter/library-androidx" />
+      <module fileurl="file://$PROJECT_DIR$/android_projects-BindingListAdapter.iml" filepath="$PROJECT_DIR$/android_projects-BindingListAdapter.iml" group="BindingListAdapter" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-androidx/library-androidx.iml" filepath="$PROJECT_DIR$/library-androidx/library-androidx.iml" />
     </modules>

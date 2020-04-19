@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
-                name="presenter"
-                type="io.ditclear.app.Presenter"/>
+            name="presenter"
+            type="io.ditclear.app.Presenter" />
     </data>
 
     <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <Button
-                android:id="@+id/single_btn"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:onClick="@{(v)->presenter.onClick(v)}"
-                android:text="single"/>
+            android:id="@+id/single_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="@{(v)->presenter.onClick(v)}"
+            android:text="single" />
 
         <Button
-                android:id="@+id/multi_btn"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:onClick="@{(v)->presenter.onClick(v)}"
-                android:text="multiple"/>
+            android:id="@+id/multi_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="@{(v)->presenter.onClick(v)}"
+            android:text="multiple" />
+
         <Button
             android:id="@+id/ob_btn"
             android:layout_width="410dp"
             android:layout_height="48dp"
             android:onClick="@{(v)->presenter.onClick(v)}"
-            android:text="partial refresh(局部刷新)"/>
+            android:text="partial refresh(局部刷新)" />
+
+        <Button
+            android:id="@+id/normal_btn"
+            android:layout_width="410dp"
+            android:layout_height="48dp"
+            android:onClick="@{(v)->presenter.onClick(v)}"
+            android:text="partial refresh(局部刷新,不使用框架)" />
     </LinearLayout>
 </layout>
